@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //article Schema
 
-const articleSchema = mongoose.Schema({
+const ArticleSchema = mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -17,4 +17,4 @@ const articleSchema = mongoose.Schema({
   }
 });
 
-const Article = (module.exports = mongoose.model("Article", articleSchema));
+const Article = (module.exports = mongoose.model("Article", ArticleSchema));
