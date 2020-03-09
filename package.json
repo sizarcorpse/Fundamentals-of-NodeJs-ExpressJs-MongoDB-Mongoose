@@ -1,0 +1,24 @@
+{
+  "name": "nodeex",
+  "version": "1.0.0",
+  "description": "simple knowldgebased app using nodejs,expressjs,mongodb,mongoose. contributed by FCC.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sizarcorpse/Fundamentals-of-NodeJs-ExpressJs-MongoDB-Mongoose.git"
+  },
+  "author": "sizar corpse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sizarcorpse/Fundamentals-of-NodeJs-ExpressJs-MongoDB-Mongoose/issues"
+  },
+  "homepage": "https://github.com/sizarcorpse/Fundamentals-of-NodeJs-ExpressJs-MongoDB-Mongoose#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "pug": "^2.0.4"
+  }
+}

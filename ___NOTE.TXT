@@ -1,0 +1,40 @@
+softwate
+    nodeJs
+    mongodb
+    mongod --directoryperdb --dbpath "D:\EX PROGRAMS\MongoDB\data\db" --logpath "D:\EX PROGRAMS\MongoDB\log\mongo.log" --logappend --install
+    expressjs
+    pug
+    git
+    nodemon
+npm init
+    package name: "name any"
+    version: (1.0.0)
+    description: 
+    entry point: (index.js) "ex. server.js"
+    test command:
+    git repository:
+    keywords:
+    author: sizar corpse
+    license: (ISC)
+
+install package
+    express
+    mongoose
+    nodemon  [npm i -D nodemon]
+
+server run :
+    "scripts": {
+    "start": "nodemon server.js"}
+
+//Database
+//Middleware
+//Controllers
+//Routers
+//Start Server
+
+
+//mongo command 
+    show dbs
+    use "name" > create a Database
+    db.createCollection('article') //create collections
+    
