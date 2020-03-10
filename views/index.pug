@@ -1,9 +1,28 @@
 extends layout
 block content
 
-    h1 #{title}
-    
-    ul
+    ul.list-inline
+        li.list-inline-item
+            h1 #{title}     
+        li.list-inline-item
+            //- input.btn.btn-primary(type='button',value="+", )
+        
+
+    ul.list-inline
         each article, i in articles
-            li  #{article.title}
+            li.list-inline-item
+                .card(style='width: 18rem;')
+                    .card-body
+                        h5.card-title #{article.title}
+                        h6.card-subtitle.mb-2.text-muted #{article.author}
+                        p.card-text
+                            | 
+                        a.card-link(href='article/'+article._id) Card link
+                        a.card-link(href='#') Another link
+                
+                
+                
+                
+                
+    
     

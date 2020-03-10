@@ -1,0 +1,15 @@
+extends layout
+block content
+        h1 #{title}
+        form(method="POST",action="/article/update/"+article._id)
+                .form-row
+                        .form-group.col
+                                input#Title.form-control(type='Title',name='title',value=article.title)
+                .form-group
+                        input#author.form-control(name='author',type='text', value=article.author)
+                .form-group
+                        textarea#body.form-control(name='body') #{article.body}
+                button.btn.btn-primary(type='submit',value="submit") 
+                        | Updated Your Imagination
+                a.btn.btn-danger.ml-2(href='http://127.0.0.1:3000/') 
+                        small No. My Imagination is Cool

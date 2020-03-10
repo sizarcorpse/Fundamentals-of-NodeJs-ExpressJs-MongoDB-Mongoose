@@ -2,13 +2,14 @@ extends layout
 block content
         h1 #{title}
         form(method="POST",action="/article/add")
-                #form-group
-                        label Title
-                        input.form.contrl(name='title',type="text")
-                #form-group
-                        label author
-                        input.form.contrl(name='author',type="text")
-                #form-group
-                        label body
-                        textarea.form.contrl(name='body')
-                input.btn.btn-primary(type='submit',value="submit")
+                .form-row
+                        .form-group.col
+                                input#Title.form-control(type='Title',name='title',placeholder='Title')
+                .form-group
+                        input#author.form-control(name='author',type='text', placeholder='user')
+                .form-group
+                        textarea#body.form-control(name='body', placeholder='Whats on your mind...')
+                button.btn.btn-primary(type='submit',value="submit") 
+                        | Unleash Your Imagination
+                a.btn.btn-danger.ml-2(href='http://127.0.0.1:3000/') 
+                        small No. I'n not Strong Enought 

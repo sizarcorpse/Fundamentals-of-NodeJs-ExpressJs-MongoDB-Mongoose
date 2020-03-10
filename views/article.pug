@@ -1,0 +1,18 @@
+extends layout
+block content
+
+    .card
+        .card-header
+            | #{article.title}
+        .card-body
+            blockquote.blockquote.mb-0
+                p
+                    | #{article.body}
+                footer.blockquote-footer
+                    | #{article.author} 
+                    cite(title='Source Title') Source Title
+        ul.list-inline.text-right
+            li.list-inline-item
+                a.card-link.text-right.mr-1.text(href='/article/update/'+article._id,role='button') Update
+            li.list-inline-item  
+                a.btn.btn-danger.text-right.delete-article.mr-1.text(data-id=article._id) Delete
