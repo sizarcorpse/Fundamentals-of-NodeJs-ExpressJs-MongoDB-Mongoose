@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
   next();
 });
 //exress validator
-const { check, validationResult } = require("express-validator");
+// const { check, validationResult } = require("express-validator");
 // app.use(
 //   expressValidator({
 //     errorFormatter: function(param, msg, value) {
@@ -79,6 +79,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //______Controllers______
 
 const ArticleControl = require("./_controllers/ArticleControl");
+const UserControl = require("./_controllers/UserControl");
 
 //______Routes______
 
@@ -89,6 +90,10 @@ app.get("/article/:_id", ArticleControl.getSingleArticle);
 app.get("/article/update/:_id", ArticleControl.singleArticleUpdate);
 app.post("/article/update/:_id", ArticleControl.addSingleArticleUpdate);
 app.delete("/article/delete/:_id", ArticleControl.singleArticleDelete);
+
+app.get("/user/newuser", UserControl.userRegristrationForm);
+app.post("/user/newuser", UserControl.userRegristration);
+app.get("/user/login", UserControl.userLoginForm);
 
 //______Start Server______
 

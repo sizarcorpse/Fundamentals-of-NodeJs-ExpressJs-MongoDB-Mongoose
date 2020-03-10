@@ -1,0 +1,14 @@
+extends layout
+block content
+        h1 #{title}
+        form(method="POST",action="/user/newuser")
+
+                .form-group
+                        input#username.form-control(name='username',type='text', placeholder='username')
+                .form-group
+                        input#password.form-control(name='password',type='password', placeholder='password')
+
+                button.btn.btn-primary(type='submit',value="submit") 
+                        | Unleash Your Imagination
+                a.btn.btn-danger.ml-2(href='http://127.0.0.1:3000/') 
+                        small No. I'n not Strong Enought

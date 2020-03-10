@@ -49,30 +49,40 @@ module.exports = {
   },
   //create single article  form
   createArticle: (req, res) => {
-    check("title", "title is required").notEmpty();
-    check("author", "author is required").notEmpty();
-    check("body", "body is required").notEmpty();
-    const errors = validationResult(req);
-    if (errors) {
-      res.render("add_article", {
-        title: "add article",
-        errors: errors
-      });
-    } else {
-      let createArticle = new Article({
-        title: req.body.title,
-        author: req.body.author,
-        body: req.body.body
-      });
-      createArticle.save().then(result => {
-        if (!result) {
-          console.log(err);
-        } else {
-          req.flash("success", "Article has been Created");
-          res.redirect("/");
-        }
-      });
-    }
+    const title = req.body.title;
+    const author = req.body.author;
+    const body = req.body.body;
+    // check("title")
+    //   .isEmpty()
+    //   .withMessage("The Last name is required");
+    // check("author")
+    //   .isEmpty()
+    //   .withMessage("The Last name is required");
+    // check("body")
+    //   .isEmpty()
+    //   .withMessage("The Last name is required");
+    // const errors = validationResult(req);
+    // if (errors) {
+    //   res.render("add_article", {
+    //     title: "add article",
+    //     errors: errors
+    //   });
+    // } else {
+
+    // }
+    let createArticle = new Article({
+      title: title,
+      author: author,
+      body: body
+    });
+    createArticle.save().then(result => {
+      if (!result) {
+        console.log(err);
+      } else {
+        req.flash("success", "Article has been Created");
+        res.redirect("/");
+      }
+    });
   },
   //update single article  form
   addSingleArticleUpdate: (req, res) => {

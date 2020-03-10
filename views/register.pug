@@ -1,0 +1,29 @@
+extends layout
+block content
+        h1 #{title}
+        form(method="POST",action="/user/newuser")
+                .form-row
+                        .form-group.col
+                                input#forename.form-control(type='text',name='forename',placeholder='forename')
+                .form-group
+                        input#surname.form-control(name='surname',type='text', placeholder='surname')
+
+                .form-group
+                        input#username.form-control(name='username',type='text', placeholder='username')
+                .form-group
+                        input#email.form-control(name='email',type='text', placeholder='email')
+                
+                .form-group
+                        input#password.form-control(name='password',type='password', placeholder='password')
+                .form-group
+                        input#password2.form-control(name='password2',type='password', placeholder='Confirm password')
+                .form-group
+                        input#age.form-control(name='age',type='text', placeholder='age')
+
+                .form-group
+                        textarea#bio.form-control(name='bio', placeholder='Whats on your mind...')
+
+                button.btn.btn-primary(type='submit',value="submit") 
+                        | Unleash Your Imagination
+                //- a.btn.btn-danger.ml-2(href='http://127.0.0.1:3000/') 
+                //-         small No. I'n not Strong Enought 

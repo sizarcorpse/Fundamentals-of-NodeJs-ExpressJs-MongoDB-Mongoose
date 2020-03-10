@@ -8,6 +8,8 @@ softwate
     nodemon
 
     npm install --save express-messages express-session connect-flash express-validatorll --save express-messages express-session connect-flash express-validator
+npm install --save passport passport-local bcryptjs
+
 npm init
     package name: "name any"
     version: (1.0.0)
